@@ -12,7 +12,7 @@ export const getPersonalizedRecommendations = async (req, res) => {
             sort: { createdAt: -1 }
         };
 
-        const recommendations = await generateRecommendations(userId, options);
+        generateRecommendations(userId, options);
 
         res.status(200).json({
             success: true,

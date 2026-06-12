@@ -2,6 +2,8 @@ import User from "../models/user.model.js";
 import { generateAccessAndRefreshToken } from "../helper/generateAccessAndRefreshToken.js";
 import jwt from "jsonwebtoken";
 
+console.log("NODE_ENV =", process.env.NODE_ENV);
+
 // signup a new user
 const signUp = async (req, res) => {
     try {

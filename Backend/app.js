@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 // Middleware Setup
 const corsOptions = {
-    origin: ["http://localhost:3000", "https://scheme-seva-gov.vercel.app"], // Allow your frontend domain and others
+    origin: true, // Allow your frontend domain and others
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Enable cookies in requests and responses
@@ -23,7 +23,10 @@ app.use(express.json()); // Parse JSON requests
 app.use(setBrowserIdentification);
 
 // Apply API security for API routes only
-app.use("/api", secureApiMiddleware);
+if (process.env.NODE_ENV === "production") {
+  app.use("/api", secureApiMiddleware);
+}
+
 
 // Declare API routes
 app.use("/api", apiRoutes); // Attach all API routes

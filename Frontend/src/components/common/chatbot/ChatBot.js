@@ -185,7 +185,8 @@ const ChatBot = ({ schemeId }) => {
                     schemeId,
                     question: userMessage,
                     language
-                }
+                },
+                { withCredentials: true }
             );
 
             setMessages(prev => [...prev, {

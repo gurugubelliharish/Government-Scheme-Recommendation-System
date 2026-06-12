@@ -58,7 +58,7 @@ const Footer = () => {
                             <img src={mail} alt="mail" />
                             <p className="font-medium">
                                 <span className="font-bold">Email: </span>
-                                9582anupamk@gmail.com
+                                abcd@gmail.com
                             </p>
                         </div>
                     </div>
@@ -107,11 +107,11 @@ const Footer = () => {
                     &copy; 2025 SchemeSeva. All rights reserved.
                 </p>
                 <Link
-                    to="https://www.linkedin.com/in/9582anupam"
+                    to="https://www.linkedin.com/in/hemanth-kumar-57a933177/"
                     className="flex items-center gap-2 mb-2">
                     <p className="font-mono font-bold text-xl py-1">
                         <span className="shiny-text text-[#FF0000]">
-                            Developed by @9582anupam
+                            Developed by @Hemanth&Varun
                         </span>
                         {/* white color icon */}
                         <OpenInNewIcon className="w-6 h-6 text-white ml-1 " />

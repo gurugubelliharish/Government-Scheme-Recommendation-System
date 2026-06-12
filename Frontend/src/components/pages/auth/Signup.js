@@ -95,7 +95,8 @@ const Signup = () => {
                     name,
                     email,
                     password,
-                },
+                }, 
+                { withCredentials: true }
             );
             console.log("Signup success:", response.data.success);
             navigate("/login");

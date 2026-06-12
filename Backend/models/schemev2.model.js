@@ -2,6 +2,11 @@ import { Schema, model } from 'mongoose';
 import mongoosePaginate from 'mongoose-paginate-v2';
 
 const schemeSchema = new Schema({
+
+    embedding: {
+        type: [Number],
+        default: []
+    },
     openDate: {
         type: Date,
         default: null
